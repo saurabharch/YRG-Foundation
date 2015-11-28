@@ -1,18 +1,17 @@
 /**
  * Created by anchaturvedi on 28/11/15.
  */
-
 'use strict';
 var mongoose = require('mongoose');
 
-function mongo_DonorModel() {
+function mongo_AddonsModel() {
     var schema = mongoose.Schema({
         'id' : Number,
         'name' : String,
-        'email' : String
+        'price' : Number
     });
 
-    return mongoose.model('donor', schema);
+    return mongoose.model('addons', schema);
 };
 
-module.exports = mongo_DonorModel();
+module.exports = mongo_AddonsModel();
