@@ -1,11 +1,12 @@
 'use strict';
 
-var DonorModel = require('../../../models').Donor;
+var DonorModel = require('../../../models').Donor,
+    shortid = require('shortid');
 
 module.exports = function(router) {
     router.get('/', function(req, res) {
         DonorModel.find(function(err, data) {
-            res.send(err ? {
+            res.json(err ? {
                 'error': 'API Error',
                 'message': 'Error occurred'
             } : data);
