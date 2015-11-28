@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 var institutions = function() {
     var schema = mongoose.Schema({
-        'id': Number,
+        'id': String,
         'name': String,
         'address': String,
         'category': [String],
