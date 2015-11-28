@@ -29,4 +29,15 @@ module.exports = function(router) {
                 res.status(200).json({'message':'Success'});
         });
     });
+
+    router.delete('/:id',function(req, res){
+        var id = req.params.id;
+
+        AddonsModel.find({'id' : id}).remove(function(err){
+            if(err)
+                res.status(500).json({ 'error' : 'API Error', 'message': 'Could not delete addon'});
+            else
+                res.status(200).json({'message':'Success'});
+        });
+    });
 };

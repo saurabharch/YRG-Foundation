@@ -50,4 +50,15 @@ module.exports = function(router) {
             res.json(response);
         }
     });
+
+    router.delete('/:id',function(req, res){
+        var id = req.params.id;
+
+        DonorModel.find({'id' : id}).remove(function(err){
+            if(err)
+                res.status(500).json({ 'error' : 'API Error', 'message': 'Could not delete donor'});
+            else
+                res.status(200).json({'message':'Success'});
+        });
+    });
 };
