@@ -8,19 +8,27 @@ Save a HIV patient by creating a system that will enable donors to donate funds 
 [Naresh Kumar]<br/>
 [Ipsita Prakash] (https://github.com/ipsi16) <br/>
 [Aravind Srivatsan] (https://github.com/aravindsrivats) <br/>
-[Anubhav Chaturvedi] (https://github.com/AnubhavChaturvedi) <br/>
-[Nageswara Rao Bommena] (https://github.com/bnagesh) <br/>
+[Anubhav Chaturvedi] (https://github.com/anubhavchaturvedi) <br/>
+[Nageshwar Rao Boman] (https://github.com/Borao) <br/>
 [Abhishek Chauhan] <br/>
 
-# Notification Server ReadMe
-Check the dependencies.sh file for related dependencies and install them.
-To run the server, execute python manage.py runserver from inside postFacebookAPI folder.
-Example send email query:
 
-POST request to http://localhost:8000/send/email/ with request body:
-{"address":"Vishranthi Charitable Trust, A.V.M Rajeswari Gardens, #4/227, M.G.R.Salai, Palavakkam, ECR, Chennai – 600 041", "time":"12.30pm", "date":"29-11-2015", "amount":"10000", "number_of_people":"200", "email":"abhishek.chauhan792@gmail.com"}
+#Problem Statement
 
-Example of send sms query:
+EcoKitchen allows donors to provide meals to AIDS patients, children, elderly people and others in need. The donors can 
+select the institutions and the type of meal they wish to donate and when to donate it. The meals are prepared in the kitchens 
+and delivered hot and fresh to the destined locations.
 
-POST request to http://localhost:8000/send/SMS/ with request body:
-{"recepient":"+918008529177"}
+The problem they have is that this entire process is manual and cumbersome. They wish to have an automated and user friendly 
+system in place for the administrators, volunteers and donors.
+ 
+#Solution
+ 
+We propose to build web portal for them to :
+* Manage users
+* Make donations through online payments
+* Track and update meals status
+* Provide SMS and email notifications
+* Share on social media platforms 
+
+We plan to use JavaScript for the backend and web portal, Android application for volunteers and donors and Parse as a datastore. 
