@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 var donor = function() {
     var schema = mongoose.Schema({
-        'id' : Number,
+        'id': String,
         'name': String,
         'email': String
     });

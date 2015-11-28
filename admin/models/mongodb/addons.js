@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 var addons = function() {
     var schema = mongoose.Schema({
-        'id': Number,
+        'id': String,
         'name': String,
         'price': Number
     });
