@@ -6,7 +6,8 @@ var donor = function() {
     var schema = mongoose.Schema({
         'id': String,
         'name': String,
-        'email': String
+        'email': String,
+        'phone': Number
     });
     return mongoose.model('donors', schema);
 };
