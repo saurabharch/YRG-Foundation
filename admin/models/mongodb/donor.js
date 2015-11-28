@@ -8,7 +8,7 @@ var donor = function() {
         'name': String,
         'email': String
     });
-    return mongoose.model('donor', schema);
+    return mongoose.model('donors', schema);
 };
 
 module.exports = donor();
