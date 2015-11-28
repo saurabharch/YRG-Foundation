@@ -6,7 +6,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     options, app;
 
-mongoose.connect('mongodb://localhost/yrg');
+mongoose.connect('mongodb://10.239.36.32/yrg');
 
 options = {
     onconfig: function(config, next) {
