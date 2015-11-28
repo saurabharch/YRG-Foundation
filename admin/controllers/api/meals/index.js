@@ -1,17 +1,14 @@
-/**
- * Created by anchaturvedi on 28/11/15.
- */
 'use strict';
 
-var MealsModel = require('../../../models/mongodb/meals.js');
+var MealsModel = require('../../../models').Meals;
 
 module.exports = function(router) {
     router.get('/', function(req, res) {
-        MealsModel.find(function(err, data){
-            if(err)
-                res.send({"message":"error occurred"});
-            else
-                res.send(data);
+        MealsModel.find(function(err, data) {
+            res.send(err ? {
+                'error': 'API Error',
+                'message': 'Error occurred'
+            } : data);
         });
     });
 };

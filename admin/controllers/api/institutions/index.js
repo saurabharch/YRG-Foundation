@@ -1,17 +1,14 @@
-/**
- * Created by anchaturvedi on 28/11/15.
- */
 'use strict';
 
-var InstitutionModel = require('../../../models/mongodb/institutions.js');
+var InstitutionModel = require('../../../models').Institutions;
 
 module.exports = function(router) {
     router.get('/', function(req, res) {
-        InstitutionModel.find(function(err, data){
-            if(err)
-                res.send({"message":"error occurred"});
-            else
-                res.send(data);
+        InstitutionModel.find(function(err, data) {
+            res.send(err ? {
+                'error': 'API Error',
+                'message': 'Error occurred'
+            } : data);
         });
     });
 };
