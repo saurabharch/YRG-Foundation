@@ -5,14 +5,15 @@
 'use strict';
 var mongoose = require('mongoose');
 
-function mongo_DonorModel() {
+function mongo_MealsModel() {
     var schema = mongoose.Schema({
         'id' : Number,
         'name' : String,
-        'email' : String
+        'price' : Number,
+        'contents' : [String]
     });
 
-    return mongoose.model('donor', schema);
+    return mongoose.model('meals', schema);
 };
 
-module.exports = mongo_DonorModel();
+module.exports = mongo_MealsModel();
