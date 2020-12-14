@@ -19,7 +19,7 @@
         "jade": "^1.11.0",
         "kraken-js": "^1.0.3",
         "requirejs": "^2.1.22",
-        "mongoose" : "^4.2.8",
+        "mongoose" : "^5.11.7",
         "shortid": "^2.0.0"
     },
     "devDependencies": {
